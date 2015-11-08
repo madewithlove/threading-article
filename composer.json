@@ -1,0 +1,6 @@
+{
+  "require": {
+    "league/tactician": "^0.6.1",
+    "symfony/var-dumper": "^2.7"
+  }
+}
