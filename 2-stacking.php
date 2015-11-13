@@ -53,9 +53,9 @@ class Searcher extends Worker
 // Stack our jobs on our worker
 $worker   = new Searcher();
 $searches = ['dogs', 'cats', 'birds'];
-foreach ($searches as $key => $search) {
-    $searches[$key] = new SearchGoogle($search);
-    $worker->stack($searches[$key]);
+foreach ($searches as $key => &$search) {
+    $search = new SearchGoogle($search);
+    $worker->stack($search);
 }
 
 // Start all jobs
